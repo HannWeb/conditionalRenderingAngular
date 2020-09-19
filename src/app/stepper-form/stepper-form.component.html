@@ -1,0 +1,43 @@
+<!-- whole Form -->
+<form [ngSwitch]="formControl">
+  <!-- step 2 -->
+  <form *ngSwitchCase="'step2'">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Phone 12</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputtext1">Phone 2</label>
+      <input type="text" class="form-control" id="exampleInputtext1">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="formControl='step3'">Next</button>
+  </form>
+
+  <!-- step 3 -->
+
+  <form *ngSwitchCase="'step3'">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputtext1">city</label>
+      <input type="text" class="form-control" id="exampleInputtext1">
+    </div>
+  </form>
+  <!-- step 1 -->
+  <form *ngSwitchDefault>
+    <div class="form-group">
+      <label for="exampleInputEmail1">First Name</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputtext1">Last Name</label>
+      <input type="text" class="form-control" id="exampleInputtext1">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="formControl='step2'">Next</button>
+  </form>
+</form>
